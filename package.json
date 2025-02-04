@@ -1,0 +1,30 @@
+{
+  "name": "nodeexpressmongo-diary",
+  "version": "1.0.0",
+  "description": "A basic diary application to showcase node + express + es6 modules + Mongo8 + ajax",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john-guerra/nodeExpressMongo-diary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/john-guerra/nodeExpressMongo-diary/issues"
+  },
+  "homepage": "https://github.com/john-guerra/nodeExpressMongo-diary#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-jest": "^28.11.0",
+    "globals": "^15.14.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.4.2"
+  }
+}
