@@ -22,7 +22,7 @@ function DiaryMaster() {
           <h3 class="card-title">${entry.date}</h3>
           <p class="card-text">${entry.text}</p>
           <p class="card-text">${entry.owner}</p>
-          <p class="card-text">${entry.tags.join(", ")}</p>
+
         </div>
       </div>
 
