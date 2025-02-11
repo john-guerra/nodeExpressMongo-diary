@@ -2,10 +2,10 @@
   "name": "nodeexpressmongo-diary",
   "version": "1.0.0",
   "description": "A basic diary application to showcase node + express + es6 modules + Mongo8 + ajax",
-  "main": "./server.js",
+  "main": "./api/index.mjs",
   "type": "module",
   "scripts": {
-    "start": "node --watch ./server.js",
+    "start": "node --watch ./api/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"No build step needed\""
   },
@@ -32,7 +32,11 @@
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
     "express": "^5.0.1",
     "mongodb": "6.13"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
