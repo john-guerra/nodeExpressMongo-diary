@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node --watch ./api/index.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo \"No build step needed\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -27,14 +26,14 @@
     "eslint-plugin-jest": "^28.11.0",
     "globals": "^15.14.0",
     "jest": "^29.7.0",
-    "prettier": "^3.4.2",
-    "vercel": "^41.0.3"
+    "prettier": "^3.4.2"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.7",
     "express": "^5.0.1",
-    "mongodb": "6.13"
+    "mongodb": "6.13",
+    "ts-node": "^10.9.2"
   },
   "engines": {
     "node": "22.x"
