@@ -10,4 +10,14 @@ router.get("/", async (req, res) => {
   res.status(200).json({ entries: entries });
 });
 
+router.post("/create", async (req, res) => {
+  console.log("🪩 POST /entries/create", req.body, req.params);
+  const { date, text, owner } = req.body;
+  const newEntry = { date, text, owner };
+  console.log("🪩 POST /entries/create: newEntry", newEntry);
+  const result = await myDB.createEntry(newEntry);
+  console.log("🪩 POST /entries/create: result", result);
+  res.redirect("/entries");
+});
+
 export default router;

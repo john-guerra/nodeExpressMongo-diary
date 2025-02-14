@@ -1,5 +1,7 @@
 console.log("⭐️ client.js loaded");
 
+import CreateEntry from "./createEntry.js";
+
 function TemplateMaster() {
   let templates = ["formCreateEntry", "navBar"];
 
@@ -17,11 +19,14 @@ function TemplateMaster() {
   async function loadTemplates() {
     console.log("👴🏼 loading templates");
 
-    templates.forEach(loadTemplate);
+    for (let t of templates) {
+      await loadTemplate(t);
+    }
   }
 
-  function initialize() {
-    loadTemplates();
+  async function initialize() {
+    await loadTemplates();
+    CreateEntry();
   }
 
   initialize();

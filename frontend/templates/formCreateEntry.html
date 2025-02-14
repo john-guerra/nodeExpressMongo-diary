@@ -1,8 +1,24 @@
-<form action="/api/entries/create" method="GET">
+<form action="/api/entries/create" method="POST">
   <div class="mb-3">
     <label class="form-label">
-      Title:
-      <input type="text" class="form-control" name="title" />
+      Text:
+      <input type="text" class="form-control" name="text" />
     </label>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">
+      Date:
+      <input type="date" class="form-control" name="date" value="2025-02-14" />
+    </label>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">
+      Owner:
+      <input type="text" class="form-control" required name="owner" />
+    </label>
+  </div>
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary">Create Entry</button>
+    <button id="btnClearEntry" class="btn btn-danger">Clear</button>
   </div>
 </form>

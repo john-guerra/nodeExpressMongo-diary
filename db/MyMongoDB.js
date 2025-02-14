@@ -36,6 +36,22 @@ function MyMongoDB() {
     }
   };
 
+  self.createEntry = async (entry) => {
+    console.log("🌽 createEntry: Opening connection");
+
+    const { client, db } = connect();
+    try {
+      const collection = db.collection(COL_NAME);
+      console.log("🌽 createEntry: Inserting entry", entry);
+      const result = await collection.insertOne(entry);
+      console.log("🌽 createEntry: gotResponse", result);
+      return result;
+    } finally {
+      console.log("🌽 createEntry: Closing connection");
+      await client.close();
+    }
+  };
+
   return self;
 }
 
