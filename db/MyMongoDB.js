@@ -5,7 +5,7 @@ dotenv.config({ path: ".env.local" });
 
 const uri = process.env.MONGODB_URI || "mongodb://localhost:37017";
 
-console.log("🌽 MyMongoDB: uri", uri.slice(0, 10));
+console.log("🌽 MyMongoDB: uri", uri.slice(0, 12));
 
 function MyMongoDB() {
   const DB_NAME = "DairyDB";
