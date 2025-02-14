@@ -2,10 +2,10 @@
   "name": "nodeexpressmongo-diary",
   "version": "1.0.0",
   "description": "A basic diary application to showcase node + express + es6 modules + Mongo8 + ajax",
-  "main": "./api/index.mjs",
+  "main": "./server.js",
   "type": "module",
   "scripts": {
-    "start": "node --watch ./api/index.mjs",
+    "start": "node --watch ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
