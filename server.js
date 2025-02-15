@@ -7,9 +7,9 @@ const app = express();
 import entriesRouter from "./routes/entries.js";
 
 
-app.use(express.static("frontend"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("frontend"));
 app.use(cookieParser());
 
 app.use("/api/entries/", entriesRouter);

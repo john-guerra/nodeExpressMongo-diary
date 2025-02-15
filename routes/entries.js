@@ -4,10 +4,20 @@ import myDB from "../db/MyMongoDB.js";
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  console.log("🪩 GET /entries");
-  const entries = await myDB.getEntries({});
-  console.log("🪩 GET /entries: got Entries", entries.length);
-  res.status(200).json({ entries: entries });
+  console.log("🪩 GET /entries req.query=", req.query, req.params, req.body);
+  const page = req.query.page || 1;
+  const docsPerPage = req.query.docsPerPage || 21;
+  const entries = await myDB.getEntries({}, { page, docsPerPage });
+  const totalDocs = await myDB.countEntries();
+  console.log("🪩 GET /entries: got Entries", entries.length, {page, docsPerPage});
+  res
+    .status(200)
+    .json({
+      entries: entries,
+      page,
+      docsPerPage,
+      totalDocs,
+    });
 });
 
 router.post("/create", async (req, res) => {
