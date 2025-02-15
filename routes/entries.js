@@ -11,13 +11,13 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/create", async (req, res) => {
-  console.log("🪩 POST /entries/create", req.body, req.params);
+  console.log("🪩 POST /entries/create", req.body);
   const { date, text, owner } = req.body;
   const newEntry = { date, text, owner };
   console.log("🪩 POST /entries/create: newEntry", newEntry);
   const result = await myDB.createEntry(newEntry);
   console.log("🪩 POST /entries/create: result", result);
-  res.redirect("/entries");
+  res.redirect("/");
 });
 
 export default router;

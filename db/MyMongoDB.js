@@ -27,7 +27,10 @@ function MyMongoDB() {
     try {
       const collection = db.collection(COL_NAME);
       console.log("🌽 getEntries: running query", query);
-      const users = await collection.find(query).toArray();
+      const users = await collection
+        .find(query)
+        .sort({ _id: -1 })
+        .toArray();
       console.log("🌽 getEntries: gotResponse", users?.length);
       return users;
     } finally {
